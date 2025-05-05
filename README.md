@@ -5,7 +5,7 @@
 
 \* Third‑year AI engineering student (EIDIA) passionate about data and artificial intelligence.
 
-[🌐 Visit my portfolio](https://aymenelachhab.github.io/Aymenelachhab/)  
+[🌐 Visit my portfolio](https://hrafxx.github.io/HRAFXX/)  
 ---
 
 ## 🚀 Highlight Projects
