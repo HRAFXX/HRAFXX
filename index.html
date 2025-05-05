@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport meta for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achraf Gebli - Portfolio</title>
+    <style>
+        /* === Reset and Global Styles === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth; /* smooth scrolling for anchor links:contentReference[oaicite:8]{index=8} */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        /* === Header and Navigation === */
+        header {
+            background: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        nav h1 {
+            font-size: 1.5rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex; /* Flex layout for nav links (responsive by default):contentReference[oaicite:9]{index=9} */
+        }
+        nav li {
+            margin-left: 1.5rem;
+        }
+        nav a {
+            font-size: 1rem;
+            transition: color 0.3s ease; /* smooth color transition on hover */
+        }
+        nav a:hover {
+            color: #1e90ff;
+        }
+        /* === Main Content Sections === */
+        main {
+            padding-top: 80px; /* offset for fixed header */
+        }
+        section {
+            padding: 2rem 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #333;
+            position: relative;
+            display: inline-block;
+        }
+        section h2::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            margin: 0.5rem auto;
+            background: #1e90ff;
+        }
+        /* === About Me Section === */
+        #about {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        /* === Projects Section === */
+        #projects {
+            background: #f9f9f9;
+        }
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 300px;
+            margin: 1rem;
+            padding: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* hover animations */
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: #1e90ff;
+        }
+        /* === Skills Section === */
+        #skills {
+            background: #fff;
+        }
+        .skill {
+            margin: 1rem 0;
+        }
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+        .skill-bar {
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .skill-level {
+            height: 1rem;
+            background: #1e90ff;
+            width: 0; /* start at 0, then animate to target */
+            transition: width 1s ease-in-out; /* animate bar filling */
+        }
+        /* === Contact Section === */
+        #contact {
+            background: #f9f9f9;
+            text-align: center;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        #contact button {
+            padding: 0.7rem 2rem;
+            border: none;
+            background: #1e90ff;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        #contact button:hover {
+            background: #007acc;
+        }
+        /* === Footer === */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #1e90ff;
+        }
+        /* === Responsive Adjustments === */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+            nav li {
+                margin: 0.5rem 0;
+            }
+            .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-card {
+                width: 90%;
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Achraf Gebli</h1>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Achraf Gebli, a passionate web developer with experience in creating modern, responsive websites. I enjoy turning creative ideas into user-friendly web experiences, and I'm always eager to learn and implement new web technologies.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Project One</h3>
+                    <p>
+                        A responsive website built with HTML5 and CSS3, featuring a modern design and smooth animations.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Two</h3>
+                    <p>
+                        An interactive JavaScript application that solves complex problems with a clean and intuitive interface.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Three</h3>
+                    <p>
+                        A mobile-friendly portfolio template showcasing various projects and skills, optimized for performance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <div class="skill-name">HTML5</div>
+                <div class="skill-bar"><div class="skill-level" data-level="90"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">CSS3</div>
+                <div class="skill-bar"><div class="skill-level" data-level="85"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar"><div class="skill-level" data-level="80"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Responsive Design</div>
+                <div class="skill-bar"><div class="skill-level" data-level="75"></div></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to get in touch via email or by filling out the form below:</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Achraf Gebli | <a href="achraf.gebli@eidia.ueuromed.org">Email Me</a>
+    </footer>
+
+    <script>
+        // Smooth scroll to sections on nav link click
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const section = document.querySelector(this.getAttribute('href'));
+                section.scrollIntoView({ behavior: 'smooth' }); // smooth scroll:contentReference[oaicite:10]{index=10}
+            });
+        });
+
+        // Animate skill bars: set width from data-level on load
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.skill-level').forEach(el => {
+                const level = el.getAttribute('data-level');
+                el.style.width = level + '%'; // triggers CSS transition
+            });
+        });
+    </script>
+</body>
+</html>
