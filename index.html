@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HRAFXX - Portfolio</title>
+
+  <!-- Favicon: blue circle with 'H' -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231e90ff'/%3E%3Ctext x='50' y='62' font-size='55' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E"/>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -16,7 +21,6 @@
 
     header {
       background: #1f1f1f;
-      color: #f0f0f0;
       position: fixed;
       width: 100%;
       top: 0;
@@ -30,9 +34,22 @@
       margin: auto;
       padding: 1rem;
     }
-    nav h1 { font-size: 1.5rem; }
+    /* Logo + Title */
+    nav h1 {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      color: #f0f0f0;
+    }
+    nav h1 img {
+      width: 32px;
+      height: 32px;
+      margin-right: 0.5rem;
+    }
+
     nav ul { list-style: none; display: flex; }
     nav li { margin-left: 1.5rem; }
+    nav a { color: #1e90ff; }
     nav a:hover { text-decoration: underline; }
 
     main { padding-top: 80px; }
@@ -56,7 +73,7 @@
       background: #1e90ff;
     }
 
-    #about, #skills { background: #1f1f1f; border-radius: 8px; padding: 1rem; }
+    #about, #skills, #contact { background: #1f1f1f; border-radius: 8px; padding: 1rem; }
     #about p { text-align: center; }
 
     .projects-container {
@@ -66,9 +83,8 @@
     }
     .project-card {
       background: #2a2a2a;
-      color: #f0f0f0;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 2px 5px rgba(255,255,255,0.05);
       width: 300px;
       margin: 1rem;
       padding: 1rem;
@@ -78,7 +94,7 @@
       transform: translateY(-5px);
       box-shadow: 0 0 15px #1e90ff55;
     }
-    .project-card h3 { color: #1e90ff; margin-bottom: 0.5rem; }
+    .project-card h3 { color: #1e90ff; margin-bottom: .5rem; }
     .lang-badge {
       display: inline-block;
       margin-top: .5rem;
@@ -105,12 +121,6 @@
       transition: width 1s ease-in-out;
     }
 
-    #contact {
-      background: #1f1f1f;
-      text-align: center;
-      border-radius: 8px;
-      padding: 2rem 1rem;
-    }
     form {
       display: flex;
       flex-direction: column;
@@ -120,31 +130,28 @@
     }
     input, textarea {
       width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
+      padding: .5rem;
+      margin: .5rem 0;
       border: 1px solid #444;
       background: #2a2a2a;
       color: #fff;
       border-radius: 4px;
     }
     button {
-      padding: 0.7rem 2rem;
+      padding: .7rem 2rem;
       background: #1e90ff;
       border: none;
       color: #fff;
-      font-size: 1rem;
       border-radius: 4px;
       cursor: pointer;
-      margin-top: 0.5rem;
+      margin-top: .5rem;
     }
-    button:hover {
-      background: #007acc;
-    }
+    button:hover { background: #007acc; }
 
     footer {
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+      font-size: .9rem;
       background: #1a1a1a;
     }
 
@@ -160,7 +167,12 @@
 <body>
   <header>
     <nav>
-      <h1>HRAFXX</h1>
+      <h1>
+        <!-- Embedded SVG logo -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231e90ff'/%3E%3Ctext x='50' y='62' font-size='55' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E"
+             alt="Logo" />
+        HRAFXX
+      </h1>
       <ul>
         <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -175,7 +187,7 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        Hi! I'm Achraf(aka HRAFXX). I’m passionate about video editing, development, and open-source projects. I love building creative digital tools and improving my skills every day.
+        Hi! I'm Achraf (aka HRAFXX). I’m passionate about video editing, development, and open-source projects. I love building creative digital tools and improving my skills every day.
       </p>
     </section>
 
@@ -185,7 +197,7 @@
       <div class="projects-container">
         <div class="project-card">
           <h3><a href="https://github.com/HRAFXX/HRAFXX" target="_blank">Social engineering attack</a></h3>
-          <p>Cyber security project to simulate phishing and vishing attacks </p>
+          <p>Cyber security project to simulate phishing and vishing attacks.</p>
           <span class="lang-badge">Python</span>
           <span class="lang-badge">Kali Linux</span>
         </div>
@@ -236,21 +248,19 @@
 
     <!-- Contact -->
     <section id="contact">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/mdkggejj" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mdkggejj" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
-
- <footer>
-  &copy; 2025 Achraf Gebli | <a href="mailto:achraf.gebli@eidia.ueuromed.org">Contact Me</a>
-</footer>
-
-
+  <footer>
+    &copy; 2025 Achraf Gebli | <a href="mailto:achraf.gebli@eidia.ueuromed.org">Contact Me</a>
+  </footer>
 
   <script>
     document.querySelectorAll('.skill-level').forEach(bar => {
