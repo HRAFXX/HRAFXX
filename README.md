@@ -10,7 +10,7 @@
 
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio-000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://hrafxx.github.io/HRAFXX/)
 [![GitHub](https://img.shields.io/github/followers/HRAFXX?label=Follow&style=social)](https://github.com/HRAFXX)
-[![Email](https://img.shields.io/badge/email--blue?style=flat-square&logo=gmail)](mailto:achrafgebli04@gmail.com)
+[![Email](https://img.shields.io/badge/email-ContactMe-blue?style=flat-square&logo=gmail)](mailto:achrafgebli04@gmail.com)
 
 ---
 
