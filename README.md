@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=180&section=header&text=Hey%20there!%20I'm%20Achraf%20Gebli&fontSize=30&fontAlignY=35&desc=AI%20Engineer%20%7C%20Maker%20%7C%20Tech%20Explorer&descAlignY=60&descAlign=62" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=180&section=header&text=Hey%20there!%20I'm%20Achraf%20Gebli&fontSize=30&fontAlignY=35&desc=AI%20Engineer%20%7C%20Developer%20%7C%20Tech%20Explorer&descAlignY=60&descAlign=62" />
 </div>
 
 ## 👋 About Me
