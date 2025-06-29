@@ -7,7 +7,9 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231e90ff'/%3E%3Ctext x='50' y='62' font-size='55' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
   <style>
+    /* Same CSS as before (no change needed) */
     :root {
       --accent: #1e90ff;
       --bg: #0d1117;
@@ -155,6 +157,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>HRAFXX</h1>
@@ -166,6 +169,7 @@
       <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
     </nav>
   </header>
+
   <main>
     <section id="about" class="intro" data-aos="fade-up">
       <h2>About Me</h2>
@@ -180,39 +184,65 @@
         <button onclick="filterProjects('Java')">Java</button>
         <button onclick="filterProjects('ESP32')">ESP32</button>
       </div>
+
       <div class="projects-container">
+
         <div class="project-card" data-tags="Python Flask MongoDB HTML CSS">
-          <h3><a href="$2" target="_blank"> <img src='https://img.icons8.com/ios-filled/20/1e90ff/code.png' alt='icon' style='vertical-align: middle; margin-left: 5px;' />Inventory Management System</a></h3>
+          <h3><a href="https://github.com/hrafxx/inventory-management" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Inventory Management System</a></h3>
           <p>A web app for managing product inventory with Flask and MongoDB.</p>
-          <div class="badges"><span><img src='https://img.icons8.com/color/16/000000/python.png' style='vertical-align: middle;'/> Python</span><span><img src='https://img.icons8.com/ios-filled/16/ffffff/flask.png' style='vertical-align: middle;'/> Flask</span><span><img src='https://img.icons8.com/color/16/000000/mongodb.png' style='vertical-align: middle;'/> MongoDB</span><span>HTML</span><span>CSS</span></div>
+          <div class="badges">
+            <span><img src="https://img.icons8.com/color/16/000000/python.png"/> Python</span>
+            <span><img src="https://img.icons8.com/ios-filled/16/ffffff/flask.png"/> Flask</span>
+            <span><img src="https://img.icons8.com/color/16/000000/mongodb.png"/> MongoDB</span>
+            <span>HTML</span><span>CSS</span>
+          </div>
         </div>
+
         <div class="project-card" data-tags="Python Kali Linux Wireshark">
-          <h3><a href="$2" target="_blank"> <img src='https://img.icons8.com/ios-filled/20/1e90ff/code.png' alt='icon' style='vertical-align: middle; margin-left: 5px;' />Social Engineering Attack Simulation</a></h3>
+          <h3><a href="https://github.com/HRAFXX/Social-Engineering-Attack" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Social Engineering Attack Simulation</a></h3>
           <p>A cybersecurity project that simulates phishing and vishing attacks for awareness training.</p>
-          <div class="badges"><span><img src='https://img.icons8.com/color/16/000000/python.png' style='vertical-align: middle;'/> Python</span><span>Kali Linux</span><span>Wireshark</span></div>
+          <div class="badges">
+            <span><img src="https://img.icons8.com/color/16/000000/python.png"/> Python</span>
+            <span>Kali Linux</span>
+            <span>Wireshark</span>
+          </div>
         </div>
+
         <div class="project-card" data-tags="ESP32 LCD KY-024 Level Shifter">
-          <h3><a href="$2" target="_blank"> <img src='https://img.icons8.com/ios-filled/20/1e90ff/code.png' alt='icon' style='vertical-align: middle; margin-left: 5px;' />Weather Station for Smart House</a></h3>
+          <h3><a href="https://github.com/HRAFXX/Weather-Station-for-Smart-House-Arduino-" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Weather Station for Smart House</a></h3>
           <p>Arduino-based system to collect environmental data using sensors and display it on an LCD.</p>
-          <div class="badges"><span>ESP32</span><span>LCD</span><span>KY-024</span><span>Level Shifter</span></div>
+          <div class="badges">
+            <span>ESP32</span><span>LCD</span><span>KY-024</span><span>Level Shifter</span>
+          </div>
         </div>
+
         <div class="project-card" data-tags="Java JavaFX MySQL">
-          <h3><a href="$2" target="_blank"> <img src='https://img.icons8.com/ios-filled/20/1e90ff/code.png' alt='icon' style='vertical-align: middle; margin-left: 5px;' />Library Management System</a></h3>
+          <h3><a href="https://github.com/HRAFXX/Library-Management-System" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Library Management System</a></h3>
           <p>Desktop application for managing library records efficiently.</p>
-          <div class="badges"><span><img src='https://img.icons8.com/color/16/000000/java-coffee-cup-logo.png' style='vertical-align: middle;'/> Java</span><span>JavaFX</span><span><img src='https://img.icons8.com/ios-filled/16/ffffff/mysql-logo.png' style='vertical-align: middle;'/> MySQL</span></div>
+          <div class="badges">
+            <span><img src="https://img.icons8.com/color/16/000000/java-coffee-cup-logo.png"/> Java</span>
+            <span>JavaFX</span>
+            <span><img src="https://img.icons8.com/ios-filled/16/ffffff/mysql-logo.png"/> MySQL</span>
+          </div>
         </div>
+
         <div class="project-card" data-tags="Python Flask OpenCV Deep Learning">
-          <h3><a href="$2" target="_blank"> <img src='https://img.icons8.com/ios-filled/20/1e90ff/code.png' alt='icon' style='vertical-align: middle; margin-left: 5px;' />Image To Emoji (DeepFace)</a></h3>
+          <h3><a href="https://github.com/HRAFXX/Image-To-Emoji-FER-" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Image To Emoji (DeepFace)</a></h3>
           <p>Real-time facial expression recognition system that maps emotions to emojis using Deep Learning.</p>
-          <div class="badges"><span><img src='https://img.icons8.com/color/16/000000/python.png' style='vertical-align: middle;'/> Python</span><span><img src='https://img.icons8.com/ios-filled/16/ffffff/flask.png' style='vertical-align: middle;'/> Flask</span><span>OpenCV</span><span>Deep Learning</span></div>
-        </div></div>
-        <div class="project-card" data-tags="ESP32 Arduino">
-          <h3><a href="$2" target="_blank"> <img src='https://img.icons8.com/ios-filled/20/1e90ff/code.png' alt='icon' style='vertical-align: middle; margin-left: 5px;' />Smart Weather Station</a></h3>
-          <p>IoT weather tracking with ESP32 and Arduino components.</p>
-          <div class="badges"><span>ESP32</span><span>Arduino</span><div style='text-align: center; margin-top: 1rem;'>
-  <a href='https://hrafxx.github.io' class='toggle-btn' target='_blank'>🌐 Live Portfolio</a>
-</div>
-$1
+          <div class="badges">
+            <span><img src="https://img.icons8.com/color/16/000000/python.png"/> Python</span>
+            <span><img src="https://img.icons8.com/ios-filled/16/ffffff/flask.png"/> Flask</span>
+            <span>OpenCV</span><span>Deep Learning</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <section id="skills" data-aos="fade-up">
       <h2>Skills</h2>
@@ -231,14 +261,17 @@ $1
       <p>Feel free to reach out at <a href="mailto:achraf.gebli@eidia.ueuromed.org">achraf.gebli@eidia.ueuromed.org</a></p>
     </section>
   </main>
+
   <footer>
     &copy; 2025 Achraf Gebli (HRAFXX) — All Rights Reserved
   </footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
     function toggleTheme() {
       document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
     }
     function filterProjects(tag) {
       const cards = document.querySelectorAll('.project-card');
@@ -251,6 +284,11 @@ $1
         }
       });
     }
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light');
+      }
+    };
   </script>
 </body>
 </html>
