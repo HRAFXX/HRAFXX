@@ -7,9 +7,8 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231e90ff'/%3E%3Ctext x='50' y='62' font-size='55' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
+
   <style>
-    /* Same CSS as before (no change needed) */
     :root {
       --accent: #1e90ff;
       --bg: #0d1117;
@@ -30,8 +29,11 @@
       color: var(--text);
       line-height: 1.6;
       transition: background 0.3s, color 0.3s;
+      scroll-behavior: smooth;
     }
     a { color: var(--accent); text-decoration: none; }
+
+    /* Header */
     header {
       background-color: var(--card);
       padding: 1rem 2rem;
@@ -54,39 +56,57 @@
       cursor: pointer;
       color: var(--text);
     }
+
     main {
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
-    section {
-      margin-bottom: 3rem;
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3rem 0;
     }
+    .hero img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid var(--accent);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero .accent {
+      color: var(--accent);
+    }
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .hero-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .hero-buttons a:hover { opacity: 0.8; }
+
+    section { margin-bottom: 3rem; }
     section h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       border-left: 4px solid var(--accent);
       padding-left: 1rem;
     }
-    .intro {
-      text-align: center;
-      padding: 2rem 0;
-    }
-    .typing {
-      display: inline-block;
-      border-right: 2px solid var(--accent);
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
-    }
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    @keyframes blink {
-      from, to { border-color: transparent; }
-      50% { border-color: var(--accent); }
-    }
+
+    /* Projects */
     .projects-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -96,59 +116,56 @@
       background-color: var(--card);
       padding: 1rem;
       border-radius: 8px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
     }
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 10px var(--accent);
+      box-shadow: 0 0 15px var(--accent);
     }
-    .project-card h3 { color: var(--accent); margin-bottom: 0.5rem; }
-    .project-card p { color: var(--muted); font-size: 0.95rem; }
+    .project-card img.preview {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+      transition: 0.3s;
+    }
+    .project-card h3 { color: var(--accent); margin-bottom: 0.3rem; }
+    .project-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
     .badges span {
       display: inline-block;
       background-color: #2c313a;
       padding: 0.3rem 0.6rem;
       border-radius: 4px;
       font-size: 0.8rem;
-      margin-top: 0.5rem;
-      margin-right: 0.5rem;
+      margin-top: 0.3rem;
+      margin-right: 0.3rem;
     }
-    .filter-bar {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    .filter-bar button {
-      background: none;
-      color: var(--text);
-      border: 1px solid var(--accent);
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      margin: 0 0.5rem;
-      cursor: pointer;
-    }
+
+    /* Skills */
     .skill-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 1rem;
+      text-align: center;
     }
     .skill {
       background: var(--card);
       padding: 1rem;
       border-radius: 8px;
-      text-align: center;
+      transition: 0.3s;
     }
-    .skill-bar {
-      margin-top: 0.5rem;
-      height: 8px;
-      background: #2c313a;
-      border-radius: 4px;
-      overflow: hidden;
+    .skill:hover { transform: translateY(-5px); }
+    .skill img { width: 40px; margin-bottom: 0.5rem; }
+
+    /* Contact */
+    .contact-icons a {
+      margin: 0 0.5rem;
+      font-size: 1.8rem;
+      color: var(--accent);
+      transition: 0.3s;
     }
-    .skill-level {
-      height: 8px;
-      background: var(--accent);
-      width: 0;
-    }
+    .contact-icons a:hover { color: white; }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -171,94 +188,64 @@
   </header>
 
   <main>
-    <section id="about" class="intro" data-aos="fade-up">
-      <h2>About Me</h2>
-      <p class="typing">👋 I'm Achraf Gebli, a creative developer and AI student passionate about building expressive and intelligent software.</p>
+    <!-- Hero Section -->
+    <section class="hero" id="about" data-aos="fade-up">
+      <img src="your-photo.png" alt="Achraf Gebli">
+      <h1>Hi, I'm <span class="accent">Achraf Gebli</span></h1>
+      <p>AI Engineering Student | Full-Stack Developer | Innovator</p>
+      <div class="hero-buttons">
+        <a href="resume.pdf" target="_blank">📄 Resume</a>
+        <a href="https://github.com/HRAFXX" target="_blank">💻 GitHub</a>
+      </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
-      <div class="filter-bar">
-        <button onclick="filterProjects('all')">All</button>
-        <button onclick="filterProjects('Python')">Python</button>
-        <button onclick="filterProjects('Java')">Java</button>
-        <button onclick="filterProjects('ESP32')">ESP32</button>
-      </div>
-
       <div class="projects-container">
 
-        <div class="project-card" data-tags="Python Flask MongoDB HTML CSS">
-          <h3><a href="https://github.com/hrafxx/inventory-management" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Inventory Management System</a></h3>
-          <p>A web app for managing product inventory with Flask and MongoDB.</p>
+        <div class="project-card">
+          <img src="project1.png" alt="Project Preview" class="preview"/>
+          <h3>Inventory Management System</h3>
+          <p>Web app for managing inventory with Flask and MongoDB.</p>
           <div class="badges">
-            <span><img src="https://img.icons8.com/color/16/000000/python.png"/> Python</span>
-            <span><img src="https://img.icons8.com/ios-filled/16/ffffff/flask.png"/> Flask</span>
-            <span><img src="https://img.icons8.com/color/16/000000/mongodb.png"/> MongoDB</span>
-            <span>HTML</span><span>CSS</span>
+            <span>Python</span><span>Flask</span><span>MongoDB</span>
           </div>
         </div>
 
-        <div class="project-card" data-tags="Python Kali Linux Wireshark">
-          <h3><a href="https://github.com/HRAFXX/Social-Engineering-Attack" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Social Engineering Attack Simulation</a></h3>
-          <p>A cybersecurity project that simulates phishing and vishing attacks for awareness training.</p>
+        <div class="project-card">
+          <img src="project2.png" alt="Project Preview" class="preview"/>
+          <h3>Image to Emoji (DeepFace)</h3>
+          <p>Real-time facial expression recognition mapping emotions to emojis.</p>
           <div class="badges">
-            <span><img src="https://img.icons8.com/color/16/000000/python.png"/> Python</span>
-            <span>Kali Linux</span>
-            <span>Wireshark</span>
-          </div>
-        </div>
-
-        <div class="project-card" data-tags="ESP32 LCD KY-024 Level Shifter">
-          <h3><a href="https://github.com/HRAFXX/Weather-Station-for-Smart-House-Arduino-" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Weather Station for Smart House</a></h3>
-          <p>Arduino-based system to collect environmental data using sensors and display it on an LCD.</p>
-          <div class="badges">
-            <span>ESP32</span><span>LCD</span><span>KY-024</span><span>Level Shifter</span>
-          </div>
-        </div>
-
-        <div class="project-card" data-tags="Java JavaFX MySQL">
-          <h3><a href="https://github.com/HRAFXX/Library-Management-System" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Library Management System</a></h3>
-          <p>Desktop application for managing library records efficiently.</p>
-          <div class="badges">
-            <span><img src="https://img.icons8.com/color/16/000000/java-coffee-cup-logo.png"/> Java</span>
-            <span>JavaFX</span>
-            <span><img src="https://img.icons8.com/ios-filled/16/ffffff/mysql-logo.png"/> MySQL</span>
-          </div>
-        </div>
-
-        <div class="project-card" data-tags="Python Flask OpenCV Deep Learning">
-          <h3><a href="https://github.com/HRAFXX/Image-To-Emoji-FER-" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/20/1e90ff/code.png" alt="icon"/> Image To Emoji (DeepFace)</a></h3>
-          <p>Real-time facial expression recognition system that maps emotions to emojis using Deep Learning.</p>
-          <div class="badges">
-            <span><img src="https://img.icons8.com/color/16/000000/python.png"/> Python</span>
-            <span><img src="https://img.icons8.com/ios-filled/16/ffffff/flask.png"/> Flask</span>
-            <span>OpenCV</span><span>Deep Learning</span>
+            <span>Python</span><span>Flask</span><span>OpenCV</span><span>Deep Learning</span>
           </div>
         </div>
 
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills" data-aos="fade-up">
       <h2>Skills</h2>
       <div class="skill-grid">
-        <div class="skill"><strong>Python</strong><div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></div>
-        <div class="skill"><strong>Java</strong><div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></div>
-        <div class="skill"><strong>C/C++</strong><div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></div>
-        <div class="skill"><strong>Video Editing</strong><div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></div>
-        <div class="skill"><strong>Photo Editing</strong><div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></div>
-        <div class="skill"><strong>R</strong><div class="skill-bar"><div class="skill-level" style="width:65%"></div></div></div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/python.png"/><p>Python</p></div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png"/><p>Java</p></div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/c-plus-plus-logo.png"/><p>C/C++</p></div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/r-project.png"/><p>R</p></div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/opencv.png"/><p>OpenCV</p></div>
+        <div class="skill"><img src="https://img.icons8.com/color/48/git.png"/><p>Git</p></div>
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
-      <p>Feel free to reach out at <a href="mailto:achraf.gebli@eidia.ueuromed.org">achraf.gebli@eidia.ueuromed.org</a></p>
+      <p>📧 <a href="mailto:achraf.gebli@eidia.ueuromed.org">achraf.gebli@eidia.ueuromed.org</a></p>
+      <div class="contact-icons">
+        <a href="https://github.com/HRAFXX" target="_blank">🐱</a>
+        <a href="https://www.linkedin.com/in/achraf-gebli-4aa7b5274/" target="_blank">💼</a>
+      </div>
     </section>
   </main>
 
@@ -272,17 +259,6 @@
     function toggleTheme() {
       document.body.classList.toggle('light');
       localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
-    }
-    function filterProjects(tag) {
-      const cards = document.querySelectorAll('.project-card');
-      cards.forEach(card => {
-        const tags = card.getAttribute('data-tags');
-        if (tag === 'all' || tags.includes(tag)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
     }
     window.onload = () => {
       if (localStorage.getItem('theme') === 'light') {
