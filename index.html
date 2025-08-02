@@ -329,7 +329,7 @@
     </section>
   </main>
 
-  <footer>
+    <footer>
     &copy; 2025 Achraf Gebli (HRAFXX) — All Rights Reserved
   </footer>
 
@@ -345,6 +345,54 @@
         document.body.classList.add('light');
       }
     };
+  </script>
+
+  <!-- GitHub Projects Auto-Fetch -->
+  <script>
+    const featuredRepos = [
+      "AI-Resume-Analyzer",
+      "Image-To-Emoji-FER-",
+      "Social-Engineering-Attack-Simulation",
+      "Smart-Weather-Station",
+      "Library-Management-System",
+      "Inventory-Management-System"
+    ];
+
+    async function fetchGitHubProjects() {
+      const container = document.getElementById("projects-container");
+      container.innerHTML = "<p>Loading projects...</p>";
+
+      try {
+        const response = await fetch("https://api.github.com/users/HRAFXX/repos");
+        const repos = await response.json();
+
+        const filtered = repos.filter(repo => featuredRepos.includes(repo.name));
+
+        container.innerHTML = "";
+        filtered.forEach(repo => {
+          const card = document.createElement("div");
+          card.className = "project-card";
+          card.innerHTML = `
+            <a href="${repo.html_url}" target="_blank">
+              <img src="img/${repo.name.toLowerCase()}.png" alt="${repo.name}" class="preview"/>
+              <h3>${repo.name.replace(/-/g, " ")}</h3>
+              <p>${repo.description || "No description provided."}</p>
+              <div class="badges">
+                <span>⭐ ${repo.stargazers_count}</span>
+                <span>🍴 ${repo.forks_count}</span>
+              </div>
+            </a>
+          `;
+          container.appendChild(card);
+        });
+
+      } catch (error) {
+        container.innerHTML = "<p>Failed to load projects. Please check your connection.</p>";
+        console.error(error);
+      }
+    }
+
+    fetchGitHubProjects();
   </script>
 </body>
 </html>
