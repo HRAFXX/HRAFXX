@@ -114,10 +114,11 @@
     }
     .project-card {
       background-color: var(--card);
-      padding: 1rem;
+      padding: 0;
       border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .project-card:hover {
       transform: translateY(-5px);
@@ -125,12 +126,13 @@
     }
     .project-card img.preview {
       width: 100%;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
-      transition: 0.3s;
+      display: block;
     }
-    .project-card h3 { color: var(--accent); margin-bottom: 0.3rem; }
-    .project-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .project-card h3 { color: var(--accent); margin: 0.5rem 1rem 0; }
+    .project-card p { color: var(--muted); font-size: 0.9rem; margin: 0.5rem 1rem; }
+    .badges {
+      margin: 0.5rem 1rem 1rem;
+    }
     .badges span {
       display: inline-block;
       background-color: #2c313a;
@@ -139,6 +141,30 @@
       font-size: 0.8rem;
       margin-top: 0.3rem;
       margin-right: 0.3rem;
+    }
+
+    /* Hover overlay */
+    .project-card a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      position: relative;
+    }
+    .project-card a::after {
+      content: "🔗 View on GitHub";
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: var(--accent);
+      color: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.75rem;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .project-card:hover a::after {
+      opacity: 1;
     }
 
     /* Skills */
@@ -204,22 +230,76 @@
       <h2>Projects</h2>
       <div class="projects-container">
 
+        <!-- AI Resume Analyzer -->
         <div class="project-card">
-          <img src="project1.png" alt="Project Preview" class="preview"/>
-          <h3>Inventory Management System</h3>
-          <p>Web app for managing inventory with Flask and MongoDB.</p>
-          <div class="badges">
-            <span>Python</span><span>Flask</span><span>MongoDB</span>
-          </div>
+          <a href="https://github.com/HRAFXX/AI-Resume-Analyzer" target="_blank">
+            <img src="img/ai-resume-analyzer.png" alt="AI Resume Analyzer" class="preview"/>
+            <h3>🚀 AI Resume Analyzer</h3>
+            <p>OCR-powered resume analyzer using TF-IDF & Scikit-learn.</p>
+            <div class="badges">
+              <span>OCR</span><span>Python (Flask)</span><span>TF-IDF</span><span>Scikit-learn</span>
+            </div>
+          </a>
         </div>
 
+        <!-- Image To Emoji (DeepFace) -->
         <div class="project-card">
-          <img src="project2.png" alt="Project Preview" class="preview"/>
-          <h3>Image to Emoji (DeepFace)</h3>
-          <p>Real-time facial expression recognition mapping emotions to emojis.</p>
-          <div class="badges">
-            <span>Python</span><span>Flask</span><span>OpenCV</span><span>Deep Learning</span>
-          </div>
+          <a href="https://github.com/HRAFXX/Image-To-Emoji-FER-" target="_blank">
+            <img src="img/image-to-emoji.png" alt="Image to Emoji" class="preview"/>
+            <h3>😀 Image To Emoji (DeepFace)</h3>
+            <p>Real-time emotion recognition mapping faces to emojis.</p>
+            <div class="badges">
+              <span>Python</span><span>Flask</span><span>OpenCV</span><span>Deep Learning</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Social Engineering Attack Simulation -->
+        <div class="project-card">
+          <a href="https://github.com/HRAFXX/Social-Engineering-Attack-Simulation" target="_blank">
+            <img src="img/social-engineering.png" alt="Social Engineering Simulation" class="preview"/>
+            <h3>🎯 Social Engineering Attack Simulation</h3>
+            <p>Simulating attacks and packet analysis in a Kali Linux lab.</p>
+            <div class="badges">
+              <span>Python</span><span>Kali Linux</span><span>Wireshark</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Weather Station for Smart House -->
+        <div class="project-card">
+          <a href="https://github.com/HRAFXX/Smart-Weather-Station" target="_blank">
+            <img src="img/weather-station.png" alt="Weather Station" class="preview"/>
+            <h3>🌦️ Weather Station for Smart House</h3>
+            <p>IoT-based weather monitoring using ESP32 and sensors.</p>
+            <div class="badges">
+              <span>ESP32</span><span>LCD</span><span>KY-024</span><span>Level Shifter</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Library Management System -->
+        <div class="project-card">
+          <a href="https://github.com/HRAFXX/Library-Management-System" target="_blank">
+            <img src="img/library-system.png" alt="Library Management System" class="preview"/>
+            <h3>📚 Library Management System</h3>
+            <p>Desktop app for managing library records with JavaFX & MySQL.</p>
+            <div class="badges">
+              <span>Java</span><span>JavaFX</span><span>MySQL</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Inventory Management System -->
+        <div class="project-card">
+          <a href="https://github.com/HRAFXX/Inventory-Management-System" target="_blank">
+            <img src="img/inventory-system.png" alt="Inventory Management System" class="preview"/>
+            <h3>✨ Inventory Management System</h3>
+            <p>Web-based inventory system with Flask and MongoDB.</p>
+            <div class="badges">
+              <span>Python</span><span>Flask</span><span>MongoDB</span><span>HTML/CSS</span>
+            </div>
+          </a>
         </div>
 
       </div>
