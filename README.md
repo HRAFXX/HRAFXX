@@ -18,11 +18,12 @@
 
 | Project                                                                                                         | Tech Stack                            |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------- | 
-| ✨ [Inventory-Management-System](https://github.com/HRAFXX/Inventory-Management-System)                          | `Python` · `Flask` · `MongoDB` · `HTML/CSS` |             
+| 🚀 [AI Resume Analyzer](https://github.com/HRAFXX/AI_Resume_Analyzer)                          | `OCR` · `Python(Flask)` · `TF-IDF` · `Scikit-learn` |  
+| 😀 [Image To Emoji (DeepFace)](https://github.com/HRAFXX/Image-To-Emoji-FER-)                                   | `Python` · `Flask` · `OpenCV` · `Deep Learning` |
 | 🎯 [Social Engineering Attack Simulation](https://github.com/HRAFXX)                                            | `Python` · `Kali Linux` · `Wireshark`       |             
 | 🌦️ [Weather Station for Smart House](https://github.com/HRAFXX/Weather-Station-for-Smart-House-Arduino-)        | `ESP32` · `LCD` · `KY-024` · `Level Shifter` |    
-| 📚 [Library Management System](https://github.com/HRAFXX/Library-Management-System)                              | `Java` · `JavaFX` · `MySQL`              |
-| 😀 [Image To Emoji (DeepFace)](https://github.com/HRAFXX/Image-To-Emoji-FER-)                                   | `Python` · `Flask` · `OpenCV` · `Deep Learning` |   
+| 📚 [Library Management System](https://github.com/HRAFXX/Library-Management-System)                              | `Java` · `JavaFX` · `MySQL`              | 
+| ✨ [Inventory-Management-System](https://github.com/HRAFXX/Inventory-Management-System)                          | `Python` · `Flask` · `MongoDB` · `HTML/CSS` | 
 
 ---
 
